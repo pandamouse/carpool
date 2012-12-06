@@ -8,8 +8,8 @@ development:
   encoding: utf8
   database: carpool_dev
   pool: 5
-  username: root
-  password: plzrJS07
+  username: carpool
+  password: carpoop
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -20,8 +20,8 @@ test:
   encoding: utf8
   database: carpool_test
   pool: 5
-  username: root
-  password: ku69FW
+  username: carpool
+  password: carpoop
   socket: /var/run/mysqld/mysqld.sock
 
 production:
@@ -29,6 +29,6 @@ production:
   encoding: utf8
   database: carpool_prod
   pool: 5
-  username: root
-  password: ku69FW
+  username: carpool
+  password: carpoop
   socket: /var/run/mysqld/mysqld.sock
