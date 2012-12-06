@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carpool</title>
+  <%= stylesheet_link_tag 'application', :media => 'all' %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="container_12">
+<header>
+        <div id="bk1" class='header'/>
+        <div id="bk2" class='header'/>
+	<h1 id="logo" class='header'><br/><%= image_tag asset_path("carpool.png") %></h1>
+	<div id="moto">Take a ride for the environment!</div>
+	<section id="loginout">
+	  <% if !current_user %>
+	    <%= link_to "Register", new_user_path %> /
+	    <%= link_to "Login", :login %> 
+	  <% else %>
+	    Hello, <%= current_user.first_name %>. 
+	    <%= link_to "Logout", :logout, :method=>:delete, :confirm=>"Are you sure you want to logout?" %>
+	  <% end %>
+	</section>
+	<% if current_user %>
+<nav id="user_menu" class="group">
+        <ul>
+                <li><%= link_to "Home", home_index_path %></li>
+                <li><%= link_to "Profile", account_path %></li>
+                <li><%= link_to "Vehicles", user_vehicles_path(current_user) %></li>
+                <li><%= link_to "Addresses", addresses_path %></li>
+                <li>Schedule Trips</li>
+        </ul>
+</nav>
+<% end %>
+</header>
+<section id="carpool_data">
+<p id="notice"><%= notice %></p>
+
+
+<%= yield %>
+
+</section>
+<footer class="container_12">
+This is a fictional case study app. <%= image_tag asset_path("carpool-50.png") %>
+</footer>
+
+</body>
+</html>

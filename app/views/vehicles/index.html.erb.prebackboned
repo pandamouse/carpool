@@ -1,0 +1,33 @@
+<h1>Listing vehicles</h1>
+
+<table>
+  <tr>
+    <th>Registration</th>
+    <th>Passenger Space</th>
+    <th>Colour</th>
+    <th>Child Seat</th>
+    <th>Boot Space</th>
+    <th>Obsolete</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vehicles.each do |vehicle| %>
+  <tr>
+    <td><%= vehicle.rego %></td>
+    <td><%= vehicle.passenger_space %></td>
+    <td><%= vehicle.colour %></td>
+    <td><%= vehicle.child_seat %></td>
+    <td><%= vehicle.boot %></td>
+    <td><%= vehicle.obsolete %></td>
+    <td><%= link_to 'Show', vehicle %></td>
+    <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+    <td><%= link_to 'Destroy', vehicle, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vehicle', new_user_vehicle_path %>

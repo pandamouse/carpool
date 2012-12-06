@@ -1,0 +1,23 @@
+// Place all the styles related to the vehicles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#numberplate {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FAE73C), to(#FFC524), color-stop(.6,#D68315));
+  background-image: -moz-linear-gradient(19% 75% 64deg,#FAE73C, #FFC524, #D68315 100%); 
+  background-image: -linear-gradient(#FAE73C,#FFC524);
+  outline: solid black;
+  -moz-outline-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  font: 36px sans-serif;
+  text-align: center;
+  -webkit-text-shadow: 1px 1px 1px #FF0;
+  -moz-text-shadow: 1px 1px 1px #FF0;
+  text-shadow: 1px 1px 1px #FF0;
+  -webkit-box-shadow: inset 1px 1px 2px #FF0;
+  -moz-box-shadow: inset 1px 1px 2px #FF0;
+  box-shadow: inset 1px 1px 2px #FF0;
+}

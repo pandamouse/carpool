@@ -1,0 +1,162 @@
+$green: rgba(115, 136, 10, 1);
+$yellow: rgba(254, 252, 234, 1);
+$radius: 10px;
+$green-box-shadow: inset 2px 2px 5px darken($green, 80%);
+@font-face {
+	font-family: 'ChunkyFive';
+	src: url(<%= asset_path 'Chunkfive-webfont.ttf' %> );
+}
+
+@-moz-keyframes bkshift {
+	from { background-position: 1980px 0; }
+  	to { background-position: 0 0; }
+}
+
+@-webkit-keyframes bkshift {
+	from { background-position: 1980px 0; }
+  	to { background-position: 0 0; }
+}
+
+header, .header {
+    border-top-right-radius: $radius;
+    border-top-left-radius: $radius;
+    -webkit-box-shadow: $green-box-shadow;
+    -moz-box-shadow: $green-box-shadow;
+    box-shadow: $green-box-shadow;
+    overflow: clip;
+} 
+
+#bk1 {
+    height: 150px;
+    background-image: url("<%= asset_path "bk1.png" %>");
+    -webkit-animation: bkshift 20s;
+    -moz-animation: bkshift 20s;
+    animation: bkshift 20s;
+//    -webkit-animation-iteration-count:infinite;
+//    -moz-animation-iteration-count:infinite;
+//    animation-iteration-count:infinite;
+}
+
+#bk2 {
+    height: 150px;
+    background-image: url("<%= asset_path "bk2.png" %>");
+    -webkit-animation: bkshift 10s;
+    -moz-animation: bkshift 10s;
+//    -webkit-animation-iteration-count:infinite;
+//    -moz-animation-iteration-count:infinite;
+//    animation-iteration-count:infinite;
+}
+#logo img {
+   height: 100px;
+   top: 20px;
+   padding: 0;
+}
+
+#moto {
+   position: relative;
+   top: -20px;
+   font-family: ChunkyFive, Georgia, serif;
+   padding:0 1em 0 1em;
+}
+
+#user_menu {
+//    position: relative;
+//    top: -10px;
+//    height: 2em;
+    padding: 0 1em 0 1em;
+    ul li, a {
+	display: table-cell;
+   	font: 18px/18px ChunkyFive, Georgia, serif;
+   	list-style: none;
+	text-align: center;
+	width: 1%;
+    	background: $yellow;
+        color: $green;
+	box-shadow: 2px -2px 5px darken($yellow, 80%); 
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        :hover {
+	  background: lighten($green, 50%);
+	  text-shadow: 2px -2px 0 lighten($yellow, 80%), 0 0 10px darken($yellow, 90%); 
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          border-radius: 10px;
+	  -webkit-transform: translate(-2px);
+	  -moz-transform: translate(-2px);
+	  transform: translate(-2px);
+	}
+    }
+    z-index: 4;
+}
+
+section#carpool_data {
+//    position:relative;
+//    top: 150px;
+    padding: 5em 1em 5em;
+    background: $yellow;
+	box-shadow: 2px -2px 10px darken($yellow, 80%); 
+}
+
+section[id*='vehicle-'] {
+	top: 400px;
+}
+
+#loginout{
+    position: relative;
+    top: -1.5em;
+    text-align: right;
+    padding: 0 1em 0 1em;
+    color: lighten($green, 70%);
+    -webkit-text-shadow: 1px 1px 1px darken($green, 50%);
+    -moz-text-shadow: 1px 1px 1px darken($green, 50%);
+    text-shadow: 1px 1px 1px darken($green, 50%);
+    border-top-right-radius: $radius;
+    border-top-left-radius: $radius;
+    -webkit-box-shadow: $green-box-shadow;
+    -moz-box-shadow: $green-box-shadow;
+    box-shadow: $green-box-shadow;
+    background: $green;
+    a {
+	color: lighten($green, 40%);
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        :hover {
+    	  background: lighten($green, 50%);
+	  text-shadow: 2px -2px 0 lighten($yellow, 80%), 0 0 10px darken($yellow, 90%); 
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          border-radius: 10px;
+	  -webkit-transform: translate(-2px);
+	  -moz-transform: translate(-2px);
+	  transform: translate(-2px);
+	}
+    }
+}
+
+footer{
+//    position: absolute;
+//    bottom: 0;
+    color: lighten($green, 50%);
+    background: $green;
+    text-align: center;
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+    -webkit-box-shadow: inset 2px 2px 5px darken($green, 80%);
+    -moz-box-shadow: inset 2px 2px 5px darken($green, 80%);
+    box-shadow: inset 2px 2px 5px darken($green, 80%);
+}
+
+.group:before,
+.group:after {
+content: "";
+display: table;
+}
+.group:after {
+clear: both;
+}
+.group {
+zoom: 1; /* IE6&7 */
+}
+

@@ -1,0 +1,35 @@
+<section id="show_address" class="clearfix">
+
+<input id="address_latitude" value="<%= @address.latitude %>" type="hidden"/>
+<input id="address_longitude" value="<%= @address.longitude %>" type="hidden"/>
+  <div id="map_canvas"></div>
+  <p>
+    <b>Address 1:</b>
+    <%= @address.address_1 %>
+  </p>
+
+<% if @address.address_2.length > 0 %>
+  <p>
+    <b>Address 2:</b>
+    <%= @address.address_2 %>
+  </p>
+<% end %>
+
+  <p>
+    <b>Suburb:</b>
+    <%= @address.suburb %>
+  </p>
+
+  <p>
+    <b>Postcode:</b>
+    <%= @address.postcode %>
+  </p>
+
+  <p>
+    <b>Country:</b>
+    <%= @address.country %>
+  </p>
+
+  <%= link_to 'Edit', edit_address_path(@address) %> |
+  <%= link_to 'Back', addresses_path %>
+</section>

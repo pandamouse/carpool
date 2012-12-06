@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  passenger_space: 1
+  rego: MyString
+  colour: MyString
+  model_id: 1
+  child_seat: false
+  boot: 1
+
+two:
+  user_id: 1
+  passenger_space: 1
+  rego: MyString
+  colour: MyString
+  model_id: 1
+  child_seat: false
+  boot: 1

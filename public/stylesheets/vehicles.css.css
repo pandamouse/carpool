@@ -1,0 +1,11 @@
+/* line 5, ../../app/assets/stylesheets/vehicles.css.scss */
+#numberplate {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fae73c), to(#ffc524), color-stop(0.6, #d68315));
+  background-image: -moz-linear-gradient(19% 75% 64deg, #fae73c, #ffc524, #d68315 100%);
+  background-image: -linear-gradient(#fae73c, #ffc524);
+  outline: solid black;
+  -moz-outline-radius: 1em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}

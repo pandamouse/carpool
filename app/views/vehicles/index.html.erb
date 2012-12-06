@@ -1,0 +1,9 @@
+<div id="vehicles"></div>
+
+<script type="text/javascript">
+  $(function() {
+    // Blog is the app name
+    window.router = new Carpool.Routers.VehiclesRouter({vehicles: <%= @vehicles.to_json.html_safe -%>});
+    Backbone.history.start();
+  });
+</script>

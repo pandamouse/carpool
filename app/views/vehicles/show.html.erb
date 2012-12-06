@@ -1,0 +1,29 @@
+<section id="vehicle-<%= @vehicle.id %>">
+<p id="notice"><%= notice %></p>
+
+<div id="numberplate" class="grid_3">
+  <%= @vehicle.rego.upcase %>
+</div>
+<p>
+  <b>Colour:</b>
+  <%= @vehicle.colour %>
+</p>
+
+<p>
+  <b>Passenger Space:</b>
+  <%= @vehicle.passenger_space %>
+</p>
+
+<p>
+  <b>Child Seat:</b>
+  <%= @vehicle.child_seat %>
+</p>
+
+<p>
+  <b>Boot Space:</b>
+  <%= @vehicle.boot %>
+</p>
+
+<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
+<%= link_to 'Back', user_vehicles_path(current_user) %>
+</section>
