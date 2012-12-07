@@ -2,7 +2,7 @@ class AddressesController < ApplicationController
   # GET /addresses
   # GET /addresses.json
   def index
-    @addresses = Address.all
+    @addresses = current_user.addresses.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class AddressesController < ApplicationController
   # GET /addresses/1
   # GET /addresses/1.json
   def show
-    @address = Address.find(params[:id])
+    @address = current_user.addresses.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -40,7 +40,7 @@ class AddressesController < ApplicationController
   # POST /addresses
   # POST /addresses.json
   def create
-    @address = Address.new(params[:address])
+    @address = current_user.addresses.new(params[:address])
 
     respond_to do |format|
       if @address.save
@@ -56,7 +56,7 @@ class AddressesController < ApplicationController
   # PUT /addresses/1
   # PUT /addresses/1.json
   def update
-    @address = Address.find(params[:id])
+    @address = current_user.addresses.find(params[:id])
 
     respond_to do |format|
       if @address.update_attributes(params[:address])
@@ -72,11 +72,11 @@ class AddressesController < ApplicationController
   # DELETE /addresses/1
   # DELETE /addresses/1.json
   def destroy
-    @address = Address.find(params[:id])
+    @address = current_user.addresses.find(params[:id])
     @address.destroy
 
     respond_to do |format|
-      format.html { redirect_to addresses_url }
+      format.html { redirect_to user_addresses_path current_user, notice: 'The address has been deleted.' }
       format.json { head :no_content }
     end
   end

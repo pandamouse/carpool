@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   acts_as_authentic 
 
   has_many :vehicles
+  has_many :addresses
 
   def set_obsolete
     self.obsolete = true

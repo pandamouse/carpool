@@ -75,7 +75,7 @@ class VehiclesController < ApplicationController
   end
 
   def destroy
-    @vehicle = Vehicle.find(params[:id])
+    @vehicle = current_user.vehiclemt.find(params[:id])
     @vehicle.destroy
 
     respond_to do |format|
