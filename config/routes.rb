@@ -1,6 +1,20 @@
 Carpool::Application.routes.draw do
 
+#  get "models/index"
+
+#  get "models/edit"
+#  get "models/update"
+
+#  get "models/new"
+
+#  get "models/create"
+
+#  get "models/delete"
+
+#  get "models/show"
+
   resources :addresses
+  resources :models
 
   resources :users do
     resources :vehicles

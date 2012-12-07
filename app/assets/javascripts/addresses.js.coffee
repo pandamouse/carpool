@@ -37,8 +37,8 @@ window.get_latlng = (address_str="") ->
           map.setZoom 15
           latlng = results[0].geometry.location
           map.setCenter latlng
-          $('#address_latitude')[0].value=latlng.Ua
-          $('#address_longitude')[0].value=latlng.Va
+          $('#address_latitude')[0].value = latlng.lat()
+          $('#address_longitude')[0].value = latlng.lng()
           latlng
         else
           alert "Geocode wasn't successful for the following reason: #{status}"
