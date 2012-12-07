@@ -1,0 +1,31 @@
+<section id="model_form" class="clearfix">
+<%= form_for(@model) do |f| %>
+  <% if @model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@model.errors.count, "error") %> prohibited this address from being saved:</h2>
+
+      <ul>
+      <% @model.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :brand_name %><br />
+    <%= f.text_field :brand_name %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br />
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br />
+    <%= f.select :year, (1800..Time.now.year) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</section>

@@ -1,0 +1,21 @@
+<h1>Model</h1>
+
+<section id="model-<%= @model.id %>">
+<p>
+  <b>Brand Name</b>
+  <%= @model.brand_name %>
+</p>
+<p>
+  <b>Model</b>
+  <%= @model.model %>
+</p>
+
+<p>
+  <b>Year</b>
+  <%= @model.year %>
+</p>
+
+<%= link_to 'Edit', edit_model_path(@model) %> |
+<%= link_to 'Back', models_path %>
+
+</section>
